@@ -8,8 +8,7 @@
 __Tasks completed__ this week:
 
 Hyperledger Fabric:
-
-- [x] Go through official [Hyperledger Fabric Introduction](https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html)
+- Go through official [Hyperledger Fabric Introduction](https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html)
 - [x] Go through official [Hyperledger Fabric Key Concepts](https://hyperledger-fabric.readthedocs.io/en/latest/key_concepts.html)
 - [x] Create initial design for our Hyperledger network (see diagram below)
 - [x] Go through official [Hyperledger Fabric Getting Started guide](https://hyperledger-fabric.readthedocs.io/en/latest/getting_started.html)
