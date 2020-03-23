@@ -7,19 +7,18 @@
 ### Week ending 3/23/20
 __Tasks completed__ this week:
 
-Hyperledger Fabric:
-- [ ] Go through official [Hyperledger Fabric Introduction](https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html)
-- [x] Go through official [Hyperledger Fabric Key Concepts](https://hyperledger-fabric.readthedocs.io/en/latest/key_concepts.html)
-- [x] Create initial design for our Hyperledger network (see diagram below)
-- [x] Go through official [Hyperledger Fabric Getting Started guide](https://hyperledger-fabric.readthedocs.io/en/latest/getting_started.html)
-- [x] Install primary Hyperledger Fabric components in VM
-	- [x] Setup new Ubuntu VM to host Hyperledger Fabric
-	- [x] Install all prerequisites (Git, cURL, Docker, Go, Node.js)
-	- [x] Install Hyperledger Fabric v2.0 latest stable code
-	- [x] Setup 3 node "test network" (in single VM) and test functionality
-
-Hardware:
-- [x] Purchased and received Google AIY Voice kit
+- Hyperledger Fabric:
+	- [x] Go through official [Hyperledger Fabric Introduction](https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html)
+	- [x] Go through official [Hyperledger Fabric Key Concepts](https://hyperledger-fabric.readthedocs.io/en/latest/key_concepts.html)
+	- [x] Create initial design for our Hyperledger network (see diagram below)
+	- [x] Go through official [Hyperledger Fabric Getting Started guide](https://hyperledger-fabric.readthedocs.io/en/latest/getting_started.html)
+	- [x] Install primary Hyperledger Fabric components in VM
+		- [x] Setup new Ubuntu VM to host Hyperledger Fabric
+		- [x] Install all prerequisites (Git, cURL, Docker, Go, Node.js)
+		- [x] Install Hyperledger Fabric v2.0 latest stable code
+		- [x] Setup 3 node "test network" (in single VM) and test functionality
+- Hardware:
+	- [x] Purchased and received Google AIY Voice kit
 
 __Tasks outstanding:__
 - Hyperledger Fabric:
