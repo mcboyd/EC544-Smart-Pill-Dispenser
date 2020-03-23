@@ -6,6 +6,7 @@
 
 ### Week ending 3/23/20
 __Tasks completed__ this week:
+
 Hyperledger Fabric:
 
 - [x] Go through official [Hyperledger Fabric Introduction](https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html)
@@ -17,6 +18,7 @@ Hyperledger Fabric:
 	- [x] Install all prerequisites (Git, cURL, Docker, Go, Node.js)
 	- [x] Install Hyperledger Fabric v2.0 latest stable code
 	- [x] Setup 3 node "test network" (in single VM) and test functionality
+
 Hardware:
 - [x] Purchased and received Google AIY Voice kit
 
