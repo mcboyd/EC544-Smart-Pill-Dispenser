@@ -3,13 +3,17 @@ Username: @MedDispenserBot
 
 About: The Medication Dispenser Bot helps keep track of patients' medication Intake and daily progress
 
+Install: $ pip install python-telegram-bot --upgrade
+
 Find it at: t.me/MedDispenserBot
 
 Logo: botlogo.jpg
 
-Access Token for HTTP API: 1019569625:AAFE5r0N4cBSsWW7rqm-LwJqPlcPlSC_Yjc
+Token: in telegramtoken.txt file
 
 API: https://core.telegram.org/bots/api
+
+https://python-telegram-bot.readthedocs.io/en/latest/telegram.html
 
 
 TODO:

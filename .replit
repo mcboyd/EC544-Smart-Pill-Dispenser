@@ -1,2 +1,2 @@
-language = "python3"
-run = ""
+language = "bash"
+run = "python Telegram/main.py"
