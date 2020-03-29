@@ -18,4 +18,3 @@ https://python-telegram-bot.readthedocs.io/en/latest/telegram.html
 
 TODO:
 - Bot Description: What can this bot do?
-- Bot About
