@@ -53,6 +53,7 @@ __Tasks completed__ this week:
    	- [Telegram Bot, API Gateway, AWS Lambda](https://dev.to/nqcm/-building-a-telegram-bot-with-aws-api-gateway-and-aws-lambda-27fg)
 
 - [x] Set up AWS IAM users, roles, groups for Matt & Yutong
+	- [x] Read about [IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
 
 __Tasks outstanding:__
 
