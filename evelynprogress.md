@@ -26,6 +26,7 @@ __Tasks completed__ this week:
       - [x] Modify description: first message as a command overview
       - [x] Modify about: chatbot profile
       - [x] Retrieve access token
+   - [x] Get familiarized with the [Telegram Bot API](https://core.telegram.org/bots/api#sendmessage)
    - [x] Code for 2 test commands:
       - "/bop": Sends doctor a greeting
       - "/echo": copies what the doctor says
@@ -33,12 +34,17 @@ __Tasks completed__ this week:
 
 - AWS Lambda:
    - [x] Try out [Amazon Lambda Tutorial](https://aws.amazon.com/lambda/getting-started/)
-   - [x] Send Message to Telegram
+   - [x] Read through [Creating Functions Using the AWS Lambda Console Editor](https://docs.aws.amazon.com/lambda/latest/dg/code-editor.html)
+   - [x] Try out this tutorial: [Running a Serverless Telegram Bot from AWS Lambda](https://medium.com/@wk0/integrating-your-serverless-telegram-bot-with-aws-api-gateway-8a6227d05eb4)
+   - [x] Send customized message to Telegram
+   	- [x] Create test JSON Events
    - [ ] Receive commands as triggers
+   - [x] Collect sample codes:
+   	- [cfn-news-totelegram](https://github.com/jeshan/cfn-news-to-telegram/blob/master/cfn-news/code/index.py)
 
  - AWS API Gateway:
-   - [x] Try out API Gateway Tutorial
-      - [ ] Troubleshoot
+   - [x] Try setting up Severless Telegram Bot with [this guide](https://medium.com/@wk0/integrating-your-serverless-telegram-bot-with-aws-api-gateway-8a6227d05eb4)
+      - [ ] Troubleshoot: Why are only deleted Lambda functions showing up?
 
 __Tasks outstanding:__
 
