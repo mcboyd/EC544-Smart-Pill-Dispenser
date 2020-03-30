@@ -8,15 +8,17 @@ Weekly Progress:
 __Tasks completed__ this week:
 
 - Set up IDEs and integrate with Github
-   - [x] Set up AWS Cloud9 Environment
+   - [x] Set up Git Bash and set head to local folder
+	- [x] Set up AWS Cloud9 Environment
    - [x] Clone, Push, Pull successfully from/to Github
    - [ ] Set up Python dependencies on laptop
       - [x] Get Repl.It account instead
 
 - Telegram Bot:
    - [x] Set up Repl.It account
-   - [x] Create Telegram User, will act as doctor
-   - [x] Work through [Telegram Bots: An Introduction for Developers](https://core.telegram.org/bots)
+   - [x] Create Telegram User, will act as doctor 
+		- [x] Retrieve chat ID
+		- [x] Work through: [Telegram Bots: An Introduction for Developers](https://core.telegram.org/bots)
    - [x] Create Chatbot: [MedDispenserBot](Telegram/README.md)
       - [x] Modify description: first message as a command overview
       - [x] Modify about: chatbot profile
@@ -36,10 +38,7 @@ __Tasks completed__ this week:
       - [ ] Troubleshoot
 
 __Tasks outstanding:__
-- Research Node.js resources:
-   - [ ] [Installing Express](https://expressjs.com/en/starter/installing.html)
-      - [ ] [HelloWorld](https://expressjs.com/en/starter/hello-world.html)
-   - [ ] [Node.js Tutorial](https://www.w3schools.com/nodejs/)
+- Work through Node.js resources:
 
 - Research MariaDB resources:
    - [ ] [Install MariaDB to RPi2](https://howtoraspberrypi.com/mariadb-raspbian-raspberry-pi/)
