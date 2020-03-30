@@ -39,8 +39,9 @@ __Tasks completed__ this week:
    - [x] Send customized message to Telegram
    	- [x] Create test JSON Events
    - [ ] Receive commands as triggers
-   - [x] Collect sample codes:
+   - [x] Collect additional resources:
    	- [cfn-news-totelegram](https://github.com/jeshan/cfn-news-to-telegram/blob/master/cfn-news/code/index.py)
+	- [How to Write Your First AWS Lambda Function](https://blog.runscope.com/posts/how-to-write-your-first-aws-lambda-function)
 
  - AWS API Gateway:
    - [x] Try setting up Severless Telegram Bot with [this guide](https://medium.com/@wk0/integrating-your-serverless-telegram-bot-with-aws-api-gateway-8a6227d05eb4)
