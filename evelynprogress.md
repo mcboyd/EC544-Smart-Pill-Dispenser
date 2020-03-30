@@ -10,7 +10,7 @@ Weekly Progress:
 
 __Tasks completed__ this week:
 
-- [x] Design [Medication Tables](MariaDB/MedicationTables.md)
+- [x] Design [Medication Tables](MariaDB/MedicationTable.md)
 
 - Set up IDEs and integrate with Github
    - [x] Set up Git Bash and set head to local folder
