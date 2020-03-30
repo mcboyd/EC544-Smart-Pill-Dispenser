@@ -10,6 +10,8 @@ Weekly Progress:
 
 __Tasks completed__ this week:
 
+- [x] Design [Medication Tables](MariaDB/MedicationTables.md)
+
 - Set up IDEs and integrate with Github
    - [x] Set up Git Bash and set head to local folder
 	- [x] Set up AWS Cloud9 Environment
@@ -57,12 +59,7 @@ __Tasks completed__ this week:
 
 __Tasks outstanding:__
 
-- Work through Node.js resources:
-
-- Research MariaDB resources:
-   - [ ] [Install MariaDB to RPi2](https://howtoraspberrypi.com/mariadb-raspbian-raspberry-pi/)
-   - [ ] [Raspian Download](https://www.raspberrypi.org/downloads/raspbian/)
-      - [ ] [Coder Dojo](https://projects.raspberrypi.org/en/coderdojo)
+- Work through Node.js & MariaDB resources
 
 ---
 <a name="032320"/>
