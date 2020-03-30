@@ -1,10 +1,11 @@
 ##Medication Table
 
-| **Name** | **Indication** | **Tablets** | **Quantity** | **Frequency** | **Doses Remaining** | **Restrictions** | **Progress Variables** |
-|:--------:|:-------------:|:----------:|:------------:|:-------------:|:-------------------:|:----------------:|:----------------------:|
+| **Name** | **Indication** | **Dosage** | **Quantity** | **Frequency** | **Doses Remaining** | **Restrictions** | **Progress Variables** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tyelenol | Headache | 250 mg | 2  | bd | 10 | [1,4] | [2, 4] |
-| Birth Control | Weight Gain | 300 mg | 1 | od | 28 | [3] | [1, 2, 3] |
+| Birth Control | Weight | 300 mg | 1 | od | 28 | [3] | [1, 2, 3] |
 | Seratonin | Depression| 75 mg | 2  |  tds | 45 | [1] | [3] |
+
 ##Restrictions Table
 
 | **Code** | **Restriction**|
