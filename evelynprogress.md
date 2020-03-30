@@ -44,6 +44,7 @@ __Tasks completed__ this week:
    - [x] Collect additional resources:
    	- [cfn-news-totelegram](https://github.com/jeshan/cfn-news-to-telegram/blob/master/cfn-news/code/index.py)
 	- [How to Write Your First AWS Lambda Function](https://blog.runscope.com/posts/how-to-write-your-first-aws-lambda-function)
+	- [Claudia Bot Builder](https://aws.amazon.com/blogs/compute/create-and-deploy-a-chat-bot-to-aws-lambda-in-five-minutes/)
 
  - AWS API Gateway:
    - [x] Try setting up Severless Telegram Bot with this guide: [Integrating Serverless Telegram Bot with AWS API Gateway](https://medium.com/@wk0/integrating-your-serverless-telegram-bot-with-aws-api-gateway-8a6227d05eb4)
