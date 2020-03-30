@@ -1,4 +1,4 @@
-##Medication Table
+## Medication Table
 
 | **Name** | **Indication** | **Dosage** | **Quantity** | **Frequency** | **Doses Remaining** | **Restrictions** | **Progress Variables** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -6,7 +6,7 @@
 | Birth Control | Weight | 300 mg | 1 | od | 28 | [3] | [1, 2, 3] |
 | Seratonin | Depression| 75 mg | 2  |  tds | 45 | [1] | [3] |
 
-##Restrictions Table
+## Restrictions Table
 
 | **Code** | **Restriction**|
 |:--------:|:---------------:|
@@ -16,7 +16,7 @@
 |4| Avoid alcohol |
 |5| Avoid food |
 
-##Progress Variables
+## Progress Variables
 
 | **Code** | **Variable**| **Dates**|
 |:--------:|:---------------:|:---------:|
