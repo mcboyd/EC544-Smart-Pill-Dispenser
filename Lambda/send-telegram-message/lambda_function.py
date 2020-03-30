@@ -20,7 +20,7 @@ def lambda_handler(event, context):
     if field_errors: 
         raise Exception(json.dumps({'field_errors': field_errors}))
     
-    telegram_msg = 'From: {name}\nEmail: {email}\n Message:{message}'
+    telegram_msg = 'From: {}\nEmail: {}\n Message: {}'.format(name, email, message)
     
     chat_id = os.environ['MY_CHAT_ID']
     
