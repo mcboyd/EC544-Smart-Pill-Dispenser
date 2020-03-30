@@ -37,6 +37,7 @@ __Tasks completed__ this week:
    - [x] Try out Tutorials:
    	- [Amazon Lambda Tutorial](https://aws.amazon.com/lambda/getting-started/)
 	- [Running a Serverless Telegram Bot from AWS Lambda](https://medium.com/@wk0/integrating-your-serverless-telegram-bot-with-aws-api-gateway-8a6227d05eb4)
+	- [Serverless Telegram bot on AWS Lambda](https://hackernoon.com/serverless-telegram-bot-on-aws-lambda-851204d4236c)
    - [x] Send customized message to Telegram
    		- [x] Create test JSON Events
    - [ ] Receive commands as triggers
@@ -49,6 +50,8 @@ __Tasks completed__ this week:
    		- [ ] Troubleshoot: Why are only deleted Lambda functions showing up?
    - [x] Find additional resources:
    	- [Telegram Bot, API Gateway, AWS Lambda](https://dev.to/nqcm/-building-a-telegram-bot-with-aws-api-gateway-and-aws-lambda-27fg)
+
+- [x] Set up AWS IAM users, roles, groups for Matt & Yutong
 
 __Tasks outstanding:__
 
