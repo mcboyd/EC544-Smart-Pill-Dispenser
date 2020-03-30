@@ -1,10 +1,13 @@
 ## Project Progress - Evelyn Liu
+
 Weekly Progress:
 * [3/30/20](#033020)
 * [3/23/20](#032320)
 ---
 <a name="033020"/>
+
 ### Week ending 3/30/20
+
 __Tasks completed__ this week:
 
 - Set up IDEs and integrate with Github
@@ -38,6 +41,7 @@ __Tasks completed__ this week:
       - [ ] Troubleshoot
 
 __Tasks outstanding:__
+
 - Work through Node.js resources:
 
 - Research MariaDB resources:
@@ -47,7 +51,9 @@ __Tasks outstanding:__
 
 ---
 <a name="032320"/>
+
 ### Week ending 3/23/20
+
 __Tasks completed__ this week:
 
 - [x] Research Telegram & Lambda resources
