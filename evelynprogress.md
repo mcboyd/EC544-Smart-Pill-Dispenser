@@ -2,7 +2,6 @@
 Weekly Progress:
 * [3/30/20](#033020)
 * [3/23/20](#032320)
-
 ---
 <a name="033020"/>
 ### Week ending 3/30/20
@@ -51,6 +50,7 @@ __Tasks outstanding:__
 <a name="032320"/>
 ### Week ending 3/23/20
 __Tasks completed__ this week:
+
 - [x] Research Telegram & Lambda resources
    - [Telegram Bots: An Introduction for Developers](https://core.telegram.org/bots)
    - [Amazon Lambda Tutorial](https://aws.amazon.com/lambda/getting-started/)
@@ -67,7 +67,4 @@ __Tasks completed__ this week:
       - [Coder Dojo](https://projects.raspberrypi.org/en/coderdojo)
 
 - [x] Set up Github branch: evelynbranch
-
-__Tasks outstanding:__
-- Read & Work through resources
 
