@@ -1,6 +1,36 @@
-## Project Progress - Matt Boyd  
 
+## Project Progress - Matt Boyd  
+Weekly Progress:
+* [3/30/20](#033020)
 * [3/23/20](#032320)
+
+---
+
+<a name="033020"/>
+
+### Week ending 3/30/20
+__Tasks completed__ this week:
+
+- Hyperledger Fabric:
+	- [x] Go through official [Hyperledger Fabric Developing Applications guide](https://hyperledger-fabric.readthedocs.io/en/latest/developapps/developing_applications.html)
+	- [x] Go through official [Hyperledger Fabric Tutorials](https://hyperledger-fabric.readthedocs.io/en/latest/tutorials.html)\
+	- [x] Permissions, roles, organizations, peers, and other Fabric parameters defined
+
+- Hardware:
+	- [x] Setup dynamic dns service to point to router
+		- [x] ec544.hopto.org
+	- [x] Configure router to route external port to internal device 
+		- *NOTE: Internal IP addresses will be determined when devices added to network*
+		- [x] RPi running Node: ec544.hopto.org:7776 -> 192.168.2.x:3100
+		- [x] VM running Hyperledger Fabric: ec544.hopto.org:7786 -> 192.168.2.x:3100
+
+__Tasks outstanding:__
+- Hyperledger Fabric:
+	- [ ] Custom network and peers setup for our scenario
+	- [ ] Able to store patient medication data in Hyperledger Fabric
+	- [ ] Able to query patient medication data from Hyperledger Fabric CLI
+
+---
 
 <a name="032320"/>
 
