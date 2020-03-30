@@ -60,6 +60,8 @@ __Tasks completed__ this week:
 __Tasks outstanding:__
 
 - Work through Node.js & MariaDB resources
+- Lambda triggers
+- API Gateway Troubleshoot & Set up
 
 ---
 <a name="032320"/>
