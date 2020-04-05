@@ -14,9 +14,11 @@ __Tasks completed__ this week:
 - API Gateway
 	- [x] Connect Lambda function to API Gateway
 	- [x] Successfully input test parameters
-	- [x] Figure out Error codes transmittence from test parameters
-	- [x] Read about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
-	- [x] Set telegram API webhook to Invoke URL
+	- [x] Set up error codes transmittence from test parameters
+	- [x] Deploy with a stage name
+		- [x] Read about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+	- [x] Set Telegram webhook to API url
+		- [x] Set up Postman to test webhook
 
 ---
 <a name="033020"/>
@@ -77,6 +79,7 @@ __Tasks outstanding:__
 - Work through Node.js & MariaDB resources
 - Lambda triggers
 - API Gateway Troubleshoot & Set up
+- Find a way to avoid the bot having to ask for updates frequently.
 
 ---
 <a name="032320"/>
