@@ -16,6 +16,7 @@ __Tasks completed__ this week:
 	- [x] Successfully input test parameters
 	- [x] Figure out Error codes transmittence from test parameters
 	- [x] Read about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+	- [x] Set telegram API webhook to Invoke URL
 
 ---
 <a name="033020"/>
