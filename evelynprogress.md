@@ -1,8 +1,22 @@
 ## Project Progress - Evelyn Liu
 
 Weekly Progress:
+* [4/6/20](#040620)
 * [3/30/20](#033020)
 * [3/23/20](#032320)
+---
+<a name="040620"/>
+
+### Week ending 3/30/20
+
+__Tasks completed__ this week:
+
+- API Gateway
+	- [x] Connect Lambda function to API Gateway
+	- [x] Successfully input test parameters
+	- [x] Figure out Error codes transmittence from test parameters
+	- [x] Read about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
 ---
 <a name="033020"/>
 
