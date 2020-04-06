@@ -1,8 +1,31 @@
 
 ## Project Progress - Matt Boyd  
 Weekly Progress:
+* [4/6/20](#040620)
 * [3/30/20](#033020)
 * [3/23/20](#032320)
+
+---
+
+<a name="040620"/>
+
+### Week ending 4/6/20
+__Tasks completed__ this week:
+
+- Hyperledger Fabric:
+	- [x] Setup custom network for our scenario
+	- [x] Add example patient medication records to blockchain 
+	- [x] Setup sample code to query and update records on blockchain
+
+- Twilio & Lambda:
+	- [x] Setup Twilio developer account and phone number
+	- [x] Setup AWS account  
+	- [x] Setup and test Lambda code to send SMS via Twilio 
+	- [x] Setup and test Lambda code to make calls with computer-generated audio via Twilio
+
+__Tasks outstanding:__
+- Hyperledger Fabric:
+	- [ ] Setup NodeJS-based application to call Hyperledger code (to query and update blockchain)
 
 ---
 
