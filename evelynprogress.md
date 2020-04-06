@@ -18,6 +18,7 @@ __Tasks completed__ this week:
 	- [x] Deploy with a stage name
 		- [x] Read about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 	- [x] Set Telegram webhook to API url
+		- [x] Learn about [webhooks](https://requestbin.com/blog/working-with-webhooks/#what-is-a-webhook)
 		- [x] Set up Postman to test webhook
 
 ---
