@@ -29,7 +29,7 @@ __Tasks completed__ this week:
 		- [x] Identify access tokens for Telegram API
 		- [x] Send messages to Telegram with local variables
 		
--Raspberry Pi
+-[x] Set up Raspberry Pi 2
 	-[x] Install Raspbian into 8G MicroSD
 
 ---
