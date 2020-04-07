@@ -1,6 +1,6 @@
 ## Medication Table
 
-| **Name** | **Indication** | **Dosage** | **Quantity** | **Frequency** | **Doses Remaining** | **Restrictions** | **Progress Variables** |
+| **Name** | **Indication** | **Dosage** | **Doses** | **Frequency** | **Remaining Doses** | **Restrictions** | **Progress Variables** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tyelenol | Headache | 250 mg | 2  | bd | 10 | [1,4] | [2, 4] |
 | Birth Control | Weight | 300 mg | 1 | od | 28 | [3] | [1, 2, 3] |
@@ -8,7 +8,7 @@
 
 ## Restrictions Table
 
-| **Code** | **Restriction**|
+| **Id** | **Restriction**|
 |:--------:|:---------------:|
 |1| Take with food |
 |2| Take before food |
@@ -18,7 +18,7 @@
 
 ## Progress Variables
 
-| **Code** | **Variable**| **Dates**|
+| **Id** | **Variable**| **Dates**|
 |:--------:|:---------------:|:---------:|
 |1| Dizziness | [1/3, 1/9] |
 |2| Nausea | [1/5, 1/6, 1/7, 1/9] |
