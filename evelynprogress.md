@@ -31,6 +31,7 @@ __Tasks completed__ this week:
 
 -[ ] Set up Raspberry Pi 2
 	-[x] Install Raspbian into 8G MicroSD
+	-[ ] Access RPi 2 via SSH
 
 - [x] Transfer patient data into SQL files
 	- [x] Install MariaDB
