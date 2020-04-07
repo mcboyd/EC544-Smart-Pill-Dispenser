@@ -30,6 +30,7 @@ __Tasks completed__ this week:
 		- [x] Send messages to Telegram with local variables
 
 - Set up Raspberry Pi 2
+
 	-[x] Install Raspbian into 8G MicroSD
 	-[ ] Access RPi 2 via SSH
 
