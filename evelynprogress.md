@@ -28,9 +28,13 @@ __Tasks completed__ this week:
 		- [x] Store user ID & message into local variables
 		- [x] Identify access tokens for Telegram API
 		- [x] Send messages to Telegram with local variables
-		
--[x] Set up Raspberry Pi 2
+
+-[ ] Set up Raspberry Pi 2
 	-[x] Install Raspbian into 8G MicroSD
+
+- [x] Transfer patient data into SQL files
+	- [x] Install MariaDB
+	- [x] Read about SQL and JSON
 
 ---
 <a name="033020"/>
