@@ -14,10 +14,10 @@
 -- Dumping data for table smart medication dispenser.medicationtable: ~3 rows (approximately)
 DELETE FROM `medicationtable`;
 /*!40000 ALTER TABLE `medicationtable` DISABLE KEYS */;
-INSERT INTO `medicationtable` (`Id`, `Name`, `Indication`, `Dosage_mg`, `Doses`, `Frequency`, `Remaining Doses`, `Restrictions`, `Progress Variables`) VALUES
-	(1, 'Tylenol', 'Headache', 00250, 02, 'bd', 00010, '{"IDs": [1,4]}', '{"IDs": [2,4]}'),
-	(2, 'Mircette', 'Weight', 00050, 01, 'od', 00045, '{"IDs": [3]}', '{"IDs": [1,2,3]}'),
-	(3, 'Seratonin', 'Depression', 00075, 02, 'tds', 00045, '{"IDs": [1,5]}', '{"IDs": [3]}');
+INSERT INTO `medicationtable` (`Index`, `Patient Id`, `Name`, `Indication`, `Dosage_mg`, `Doses`, `Frequency`, `Remaining Doses`, `Restrictions`, `Progress Variables`) VALUES
+	(1, 00023, 'Tylenol', 'Headache', 00250, 02, 'bd', 00010, '{"IDs": [1,4]}', '{"IDs": [2,4]}'),
+	(2, 00023, 'Mircette', 'Weight', 00050, 01, 'od', 00045, '{"IDs": [3]}', '{"IDs": [1,2,3]}'),
+	(3, 00023, 'Seratonin', 'Depression', 00075, 02, 'tds', 00045, '{"IDs": [1,5]}', '{"IDs": [3]}');
 /*!40000 ALTER TABLE `medicationtable` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
