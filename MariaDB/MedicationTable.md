@@ -32,6 +32,7 @@
 |23| John Snow |
 |24| Bellatrix Lestrange |
 
+
 *Note:
 - Arrays are LONGTEXT datatypes, but in JSON format
 - [List of Medical Abbreviations](https://en.wikipedia.org/wiki/List_of_medical_abbreviations:_Latin_abbreviations)
