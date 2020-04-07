@@ -2,7 +2,7 @@
 
 |**Id** | **Patient Id** | **Name** | **Indication** | **Dosage_mg** | **Doses** | **Frequency** | **Remaining Doses** | **Restrictions** | **Progress Variables** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1 | 23 | Tyelenol | Headache | 250 | 2  | bd | 10 | [1,4] | [2, 4] |
+| 1 | 23 | Tylenol | Headache | 250 | 2  | bd | 10 | [1,4] | [2, 4] |
 | 2 | 23 | Mircette | Weight | 50 | 1 | od | 28 | [3] | [1, 2, 3] |
 | 3 | 23 | Seratonin | Depression| 75 | 2  |  tds | 45 | [1, 5] | [3] |
 
