@@ -4,6 +4,7 @@ Bot: Enter the following commands to retrieve patient information.
 /contacts - patients' trusted contacts'
 /progress - side effects or symptoms this week
 /treatment - list what the medications are treating
+/prescriptions - list of patient medication
 
 Doctor: /log
 Bot: The patient forgot to take Tylenol at 8:30 AM on Thursday.
