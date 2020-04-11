@@ -2,34 +2,62 @@ import json
 import os
 from botocore.vendored import requests
 
-def check_param(event:dict, param:str, field_errors:dict)->str:
-    # checks for key and if val is null or an empty string
-    if param in event and event[param] and str(event[param]).strip():
-        return str(event[param])
+def executeCommand(command:str)->str:
+
+    if command == "patient":
+        return "patient"
+    elif command == "log":
+        return "log"
+    elif command == "contacts":
+        return "contacts"
+    elif command == "progress":
+        return "progress"
+    elif command == "treatment":
+        return "treatment"
     else:
-        field_errors[param] = "Required"
-        return None
+        return "Valid bot commands:\n" \
+                "/patient - name & age of patient\n" \
+                "/log - missed medication for the past 30 days\n" \
+                "/contacts - patients' trusted contacts'\n" \
+                "/progress - side effects or symptoms this week\n" \
+                "/treatment - list what the medications are treating\n"
 
 def lambda_handler(event, context):
     field_errors = {}
-    # ignore event parameters other than these 3
-    name = check_param(event, 'name', field_errors)
-    email = check_param(event, 'email', field_errors)
-    message = check_param(event, 'message', field_errors)   
-
+    command = ""
+    if 'message' in event:
+        message = event['message']
+        
+        if 'from' in message:
+            chat_id = str(message['from']['id']).strip()
+        else:
+            field_errors['chat_id'] = "Dr's ID missing"
+        
+        if 'text' in message:    
+            text = message['text'].strip()
+        else:
+            field_errors['text'] = "Text missing"
+            
+        if 'entities' in message:
+            entities = message['entities']
+            for entity in entities:
+                if entity['type'] == "bot_command":
+                    command = text[entity['offset']+1:entity['offset']+entity['length']]
+                    break
+        else:
+            command = ""
+    else:
+        field_errors['message'] = "Message missing"
+        
     if field_errors: 
         raise Exception(json.dumps({'field_errors': field_errors}))
     
-    telegram_msg = 'From: {}\nEmail: {}\n Message: {}'.format(name, email, message)
+    telegram_msg = executeCommand(command)
     
-    chat_id = os.environ['MY_CHAT_ID']
-    
-    telegram_token = os.environ['TELEGRAM_BOT_TOKEN']
-    
-    api_url = "https://api.telegram.org/bot"+telegram_token+"/"
-    
+    telegram_msg = 'Doctor ID: {}\nMessage: {}\nCommand: {}'.format(chat_id, telegram_msg, command)
     params = {'chat_id': chat_id, 'text': telegram_msg}
-    
+    telegram_token = os.environ['TELEGRAM_BOT_TOKEN']
+    api_url = "https://api.telegram.org/bot"+telegram_token+"/"
     res = requests.post(api_url + "sendMessage", data=params).json()
 
     if res["ok"]:
