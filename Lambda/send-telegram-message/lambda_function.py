@@ -2,64 +2,67 @@ import json
 import os
 from botocore.vendored import requests
 
-def executeCommand(command:str)->str:
-
-    if command == "patient":
-        return "patient"
-    elif command == "log":
-        return "log"
-    elif command == "contacts":
-        return "contacts"
+def executeCommand(command:str, data:str)->str:
+    if command == "patients":
+        message = "ID-Name-Birthdate\n"
+        for patient in data:
+            for key in patient.keys():
+                message += patient[key] + "\n"
+    elif command == "medlist":
+        message = "MedID-Name-Escalations-Missed Doses-Indication\n"
+        for medication in data:
+            for key in medication.keys():
+                message += medication[key] + "\n"
+        message += "\nSee medication detail with command /meddetail [MedID]"
     elif command == "progress":
-        return "progress"
-    elif command == "treatment":
-        return "treatment"
+        progress = {}
+        message = ""
+        for item in data:
+            progresscode = item['Progress_Code']
+            date = item['Date']
+            if progresscode in progress:
+                progress[progresscode].append(date)
+            else:
+                progress[progresscode] = [date]
+        for key in progress.keys():
+            message += "Patient experienced {} on:\n".format(key)
+            for text in progress[key]:
+                message += "{}\n".format(text)
+    elif command == "meddetail":
+        message = data
     else:
-        return "Valid bot commands:\n" \
-                "/patient - name & age of patient\n" \
-                "/log - missed medication for the past 30 days\n" \
-                "/contacts - patients' trusted contacts'\n" \
-                "/progress - side effects or symptoms this week\n" \
-                "/treatment - list what the medications are treating\n"
+        message = "Invalid Command"
+
+    return message
 
 def lambda_handler(event, context):
     field_errors = {}
-    command = ""
-    if 'message' in event:
-        message = event['message']
-        
-        if 'from' in message:
-            chat_id = str(message['from']['id']).strip()
-        else:
-            field_errors['chat_id'] = "Dr's ID missing"
-        
-        if 'text' in message:    
-            text = message['text'].strip()
-        else:
-            field_errors['text'] = "Text missing"
-            
-        if 'entities' in message:
-            entities = message['entities']
-            for entity in entities:
-                if entity['type'] == "bot_command":
-                    command = text[entity['offset']+1:entity['offset']+entity['length']]
-                    break
-        else:
-            command = ""
+    
+    if 'doctorid' in event:
+        chat_id = int(event['doctorid'])
+        chat_id = 51250299
     else:
-        field_errors['message'] = "Message missing"
+        field_errors['chat_id'] = "Dr's ID missing"
+
+    if 'command' in event:
+        command = event['command'].split(' ',1)[0]
+    else:
+        field_errors['command'] = "Command missing"
         
+    if 'data' in event:
+        data = event['data']
+    else:
+        field_errors['data'] = "Data missing"
+
     if field_errors: 
         raise Exception(json.dumps({'field_errors': field_errors}))
+        
+    telegram_msg = executeCommand(command, data)
     
-    telegram_msg = executeCommand(command)
-    
-    telegram_msg = 'Doctor ID: {}\nMessage: {}\nCommand: {}'.format(chat_id, telegram_msg, command)
     params = {'chat_id': chat_id, 'text': telegram_msg}
     telegram_token = os.environ['TELEGRAM_BOT_TOKEN']
     api_url = "https://api.telegram.org/bot"+telegram_token+"/"
     res = requests.post(api_url + "sendMessage", data=params).json()
-
     if res["ok"]:
         return {
           "statusCode": 200,
@@ -71,5 +74,3 @@ def lambda_handler(event, context):
           "statusCode": 400,
           "body": res
         }
-
-    
