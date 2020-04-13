@@ -1,2 +1,2 @@
 language = "bash"
-run = "python Telegram/main.py"
+run = "python Lambda/queryHyp.py"
