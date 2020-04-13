@@ -13,13 +13,30 @@ __Tasks completed__ this week:
 
 - API Gateway
 	- [x] Connect Lambda function to API Gateway
+		- [x] Set up stateless REST API
+		- [x] Set up resource using telegram token
+		- [x] Set up POST method
 	- [x] Successfully input test parameters
 	- [x] Set up error codes transmittence from test parameters
-	- [x] Deploy with a stage name
+	- [x] Deploy with a stage name and resource url
 		- [x] Read about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 	- [x] Set Telegram webhook to API url
 		- [x] Learn about [webhooks](https://requestbin.com/blog/working-with-webhooks/#what-is-a-webhook)
 		- [x] Set up Postman to test webhook
+	- [x] Communicate with Telegram
+		- [x] Identify JSON content as events from Telegram
+		- [x] Store user ID & message into local variables
+		- [x] Identify access tokens for Telegram API
+		- [x] Send messages to Telegram with local variables
+
+- Set up Raspberry Pi 2
+
+	-[x] Install Raspbian into 8G MicroSD
+	-[ ] Access RPi 2 via SSH
+
+- [x] Transfer patient data into SQL files
+	- [x] Install MariaDB
+	- [x] Read about SQL and JSON
 
 ---
 <a name="033020"/>
