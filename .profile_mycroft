@@ -1,0 +1,6 @@
+
+# WARNING: This file may be replaced in future, do not customize.
+# set path so it includes Mycroft utilities
+if [ -d "/home/pi/mycroft-core/bin" ] ; then
+    PATH="$PATH:/home/pi/mycroft-core/bin"
+fi
