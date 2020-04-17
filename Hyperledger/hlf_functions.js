@@ -91,7 +91,8 @@ async function patientProgress(doctorId, patientId) {
 
 function sendDataToLambda(payload) {
 	// Try sending data to Telegram via Lambda
-    var returnData = { name: "Matt's NodeJS", email: "mcboyd@bu.edu", message: payload };
+    // var returnData = { name: "Matt's NodeJS", email: "mcboyd@bu.edu", message: payload };
+    var returnData = payload;
     var lambda = new AWS.Lambda();
 	var params = {
 	  FunctionName: 'send-telegram-message', /* required */
