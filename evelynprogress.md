@@ -7,7 +7,7 @@ Weekly Progress:
 ---
 <a name="040620"/>
 
-### Week ending 3/30/20
+### Week ending 4/6/20
 
 __Tasks completed__ this week:
 
