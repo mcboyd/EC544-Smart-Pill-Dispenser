@@ -1,13 +1,53 @@
 ## Project Progress - Evelyn Liu
 
 Weekly Progress:
+* [4/20/20](#042020)
+* [4/13/20](#041320)
 * [4/6/20](#040620)
 * [3/30/20](#033020)
 * [3/23/20](#032320)
+
+---
+<a name="042020"/>
+
+### Week ending 4/20/20
+
+__Tasks completed__ this week:
+
+Split up Lambda function to allow for processing time in Hyperledger
+1. send-telegram-message-2 receives telegram commands point towards hyperledger webhooks
+2. send-telegram-message receives hyperledger calls and sends messages to Telegram
+*Tested in PipeDream initially to check whether data sent to endpoints are formmatted properly*
+
+Requested JSON format change in Hyperledger from Matt
+
+See [screenshots](Telegram/README.md) of the commands functioning properly in Telegram
+
+---
+<a name="041320"/>
+
+### Week ending 4/13/20
+
+__Tasks completed__ this week:
+
+- API Gateway
+	- [x] Integrate token into stage name and resource
+	
+- AWS Lambda
+	- [x] Connect to new Lambda function
+		- [ ] Split Lambda into 2 functions to receive command and then to send message back
+	- [x] Identify appropriate JSON structure to store information and communicate with Hyperledger
+	- [x] Identify commands to request information from Hyperledger
+	- [x] Communicate with Telegram
+		- [x] Format input to identify entities, patient ID, medicine ID, dr. ID
+- NodeJS, ExpressJS
+	- [x] Install & learn
+	
+- Github: A previous log of 4/13 was deleted as a result of a Github version roleback. But these were the essence of that week that I can remember.
 ---
 <a name="040620"/>
 
-### Week ending 3/30/20
+### Week ending 4/6/20
 
 __Tasks completed__ this week:
 

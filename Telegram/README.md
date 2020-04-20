@@ -17,5 +17,9 @@ https://python-telegram-bot.readthedocs.io/en/latest/telegram.html
 
 
 Bot Commands:
-  - /bot "sends greeting"
-  - /echo "returns copied message"
+
+![patients](patientsscreenshot.png)
+![progress](progressscreenshot.png)
+![prescriptions](prescriptionsscreenshot.png)
+![meddetails](meddetailscreenshot.png)
+![invalid](invalidcommandscreenshot.png)
