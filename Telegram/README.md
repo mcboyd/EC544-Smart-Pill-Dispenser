@@ -17,4 +17,4 @@ https://python-telegram-bot.readthedocs.io/en/latest/telegram.html
 
 
 Bot Commands:
-
+![/patients](patients_screenshot.png)
