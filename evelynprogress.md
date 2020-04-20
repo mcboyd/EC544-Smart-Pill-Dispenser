@@ -21,7 +21,7 @@ Split up Lambda function to allow for processing time in Hyperledger
 
 Requested JSON format change in Hyperledger from Matt
 
-See [screenshots](#Telegram/README.md) of the commands functioning properly in Telegram
+See [screenshots](Telegram/README.md) of the commands functioning properly in Telegram
 
 ---
 <a name="041320"/>
