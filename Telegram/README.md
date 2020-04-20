@@ -17,4 +17,9 @@ https://python-telegram-bot.readthedocs.io/en/latest/telegram.html
 
 
 Bot Commands:
-![patients](patients screenshot.png)
+
+![patients](patientsscreenshot.png)
+![progress](progressscreenshot.png)
+![prescriptions](prescriptionsscreenshot.png)
+![meddetails](meddetailscreenshot.png)
+![invalid](invalidcommandscreenshot.png)
