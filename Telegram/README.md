@@ -17,5 +17,4 @@ https://python-telegram-bot.readthedocs.io/en/latest/telegram.html
 
 
 Bot Commands:
-  - /bot "sends greeting"
-  - /echo "returns copied message"
+
