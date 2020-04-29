@@ -19,6 +19,7 @@ __Tasks completed__ this week:
 - [x] Script video demo
 - [x] Script Mycroft dialogue
 - [x] Check for logistical errors between Lambda and Hyperledger
+- [x] Recover my "evelynbranch" because everything got deleted....?!?!
 
 ---
 <a name="042020"/>
