@@ -10,10 +10,10 @@
 
 [Project Technical Report](EC544_Technical_Report.pdf)
 
-Technial Overview Video
+Technial Overview Video  
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=NhOMKpnSwPI
 " target="_blank"><img src="http://img.youtube.com/vi/NhOMKpnSwPI/0.jpg" 
 alt="EC544 Smart Medication Dispenser Project" width="640" height="480" border="1" /></a>
 
-Project Architecture
+Project Architecture  
 ![Project Architecture](images/EC544_Smart_Medication_Dispenser_Systems.png "Project Architecture")
