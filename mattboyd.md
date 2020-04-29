@@ -1,11 +1,31 @@
 
 ## Project Progress - Matt Boyd  
 Weekly Progress:
+* [4/27/20](#042720)
 * [4/13/20](#041320)
 * [4/6/20](#040620)
 * [3/30/20](#033020)
 * [3/23/20](#032320)
 
+---
+<a name="042720"/>
+
+### Week ending 4/27/20
+__Tasks completed__ this week:
+
+- Hyperledger Fabric:
+	- [x] Add code to insert medication "takeing" events
+	- [x] Add code to insert "progress" updates from Mycroft
+
+- NodeJS (Other):
+	- [x] Add code to receive POST calls from Mycroft with "progress" updates
+	- [x] Setup scheduling process
+	- [x] Setup alerting process
+	- [x] Connect Twilio alerts to alerting process
+	- [x] Test all
+
+- Logistical:
+	- [x] Create video demos 
 ---
 
 <a name="041320"/>

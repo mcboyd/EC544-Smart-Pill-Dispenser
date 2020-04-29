@@ -16,6 +16,8 @@ var uuid = require('uuid');
 //   }
 // });
 // Then set the AWS region (required)
+var credentials = new AWS.SharedIniFileCredentials({profile: 'default'});
+AWS.config.credentials = credentials;
 AWS.config.update({region: 'us-east-2'});
 
 
@@ -88,10 +90,29 @@ async function patientProgress(doctorId, patientId) {
     return result;
 }
 
+// Inserts patient "progress" question results for an input medication ID, progress code, and progress date
+// No Return, really....success maybe?
+async function updateProgress(medicationId, progressCode, progressDate) {
+	// Evaluate the specified transaction.
+    var contract = await connectNetwork();
+    const result = await contract.submitTransaction('updateProgress', medicationId, progressCode, progressDate);
+    return result;
+}
+
+// Inserts patient "progress" question results for an input medication ID, progress code, and progress date
+// No Return, really....success maybe?
+async function takePrescription(medicationId, takeTime, timeliness, escalation) {
+	// Evaluate the specified transaction.
+    var contract = await connectNetwork();
+    const result = await contract.submitTransaction('takePrescription', medicationId, takeTime, timeliness, escalation);
+    return result;
+}
+
 
 function sendDataToLambda(payload) {
 	// Try sending data to Telegram via Lambda
-    var returnData = { name: "Matt's NodeJS", email: "mcboyd@bu.edu", message: payload };
+    // var returnData = { name: "Matt's NodeJS", email: "mcboyd@bu.edu", message: payload };
+    var returnData = payload;
     var lambda = new AWS.Lambda();
 	var params = {
 	  FunctionName: 'send-telegram-message', /* required */
@@ -106,5 +127,5 @@ function sendDataToLambda(payload) {
 
 
 module.exports = {
-	patientList, medicationList, medicationDetail, patientProgress, sendDataToLambda
+	patientList, medicationList, medicationDetail, patientProgress, updateProgress, takePrescription, sendDataToLambda
 };
