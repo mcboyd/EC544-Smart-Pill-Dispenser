@@ -1,11 +1,22 @@
 ## Project Progress - Evelyn Liu
 
 Weekly Progress:
+* [4/27/20](#042720)
 * [4/20/20](#042020)
 * [4/13/20](#041320)
 * [4/6/20](#040620)
 * [3/30/20](#033020)
 * [3/23/20](#032320)
+
+---
+<a name="042720"/>
+
+### Week ending 4/27/20
+
+__Tasks completed__ this week:
+[x] Start report template
+[x] Script video demo
+[x] Script Mycroft dialogue
 
 ---
 <a name="042020"/>
