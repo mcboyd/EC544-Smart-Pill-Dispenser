@@ -1,5 +1,7 @@
 # EC544-Smart-Pill-Dispenser
 
+Team: Matt Boyd, Evelyn Liu, Yutong Wang  
+
 [Project updates: Matt Boyd](mattboyd.md)
 
 [Project updates: Evelyn Liu](evelynprogress.md)
