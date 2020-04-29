@@ -14,6 +14,7 @@ Weekly Progress:
 ### Week ending 4/27/20
 
 __Tasks completed__ this week:
+
 [x] Start report template
 [x] Script video demo
 [x] Script Mycroft dialogue
