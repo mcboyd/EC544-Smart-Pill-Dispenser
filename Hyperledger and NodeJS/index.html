@@ -15,7 +15,7 @@
 			<h1 class="display-4">Smart Medication Dispenser</h1>
 			<p class="lead">Help managing your medications.<span id="instructions"></span></p>
 		</div>
-		<div class="container">
+		<div class="container" id="cardcontainer">
 			<div id="cards" class="card-deck mb-3 text-center"></div>
 		</div>
 		<p id="bodyContent"></p>
@@ -26,6 +26,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" crossorigin="anonymous"></script>
 	<script>
 		function GetFormattedDate(dateTime) {
 		    var todayTime = new Date(dateTime);
@@ -51,7 +52,7 @@
 			var cardData = "";
 			record.forEach(obj => {
 				var dateDob = GetFormattedDate(obj.DOB);
-				cardData += cardHeadStart + obj.Name + ' <small class="text-muted">(' + dateDob + ')</small>' + cardHeadEnd + cardButtonStart + 'patBtn" data-pid="' + obj.Id + '" data-pname="' + obj.Name + '"' + cardButtonTextStart + "Login" + cardButtonEnd;
+				cardData += cardHeadStart + obj.Name + ' <small class="text-muted">(' + moment(obj.DOB).format("MM/DD/YYYY") + ')</small>' + cardHeadEnd + cardButtonStart + 'patBtn" data-pid="' + obj.Id + '" data-pname="' + obj.Name + '"' + cardButtonTextStart + "Login" + cardButtonEnd;
 		    });
 			document.getElementById('cards').innerHTML+=cardData;
 			addPatBtnEL();
@@ -60,11 +61,37 @@
 			console.log("meds: " + data);
 			let record = JSON.parse(data);
 			var cardData = "";
+			// Below lines are for accumulating the restrictions for each medication into one record for display on the medication card
+			var medRests = new Map();
+			var medRestColl = Object.entries(
+			  record.reduce((a, { Id, Restriction }) => {
+			    if (!a[Id]) a[Id] = [];
+			    a[Id].push(Restriction);
+			    return a;
+			  }, {})
+			).map(([Id, Restrictions]) => medRests.set(Id, Restrictions.join('<br/>')));
+			// Below adds med details to a card and displays card
+			let medNumber = 0;
 			record.forEach(obj => {
-				cardData += cardHeadStart + obj.Name + ' <small class="text-muted">' + obj.Dosage + ' (' + obj.Indication + ')</small>' + cardHeadEnd + cardTimeStart + "8pm" + cardQuantityStart + obj.Quantity + cardTextStart + '<span class="text-danger text-bold">restrictions...</span>' + cardTextEnd + cardButtonStart + 'medBtn" data-mid="' + obj.Id + '"' + cardButtonTextStart + "Take Now" + cardButtonEnd;
+				if(medNumber != obj.Id) {
+					cardData += cardHeadStart + obj.Name + ' <small class="text-muted">' + obj.Dosage + ' (' + obj.Indication + ')</small>' + cardHeadEnd + cardTimeStart + moment(obj.DoseTime, "hh:mm:ss").format("h:mm a") + cardQuantityStart + obj.Quantity + cardTextStart + '<span class="text-danger text-bold">' + medRests.get(obj.Id.toString()) + '</span>' + cardTextEnd + cardButtonStart + 'medBtn" data-mid="' + obj.Id + '"' + cardButtonTextStart + "Take Now" + cardButtonEnd;
+					medNumber = obj.Id;
+				} 
 		    });
 			document.getElementById('cards').innerHTML = cardData;
 			addMedBtnEL();
+		});
+
+		socket.on('alert', function(data) {
+			var container = document.getElementById('cardcontainer');
+			var cards = document.getElementById('cards');
+			var newDiv = document.createElement('div');
+			newDiv.classList.add('alert-primary');
+			newDiv.classList.add('alert');
+			newDiv.setAttribute("role","alert")
+			newDiv.setAttribute("id","alert")
+			newDiv.innerHTML = data;
+			container.insertBefore(newDiv, cards);
 		});
 
 		function addPatBtnEL() {
@@ -78,7 +105,11 @@
 		function addMedBtnEL() {
 			document.querySelectorAll('.medBtn').forEach(item => { item.addEventListener('click', function(item){
 				var mId = item.srcElement.getAttribute('data-mid');
-				alert("Medication Id: " + mId);
+				// indicate med taken
+				socket.emit('medTaken', { mId: mId });
+				// clear alert
+				var alertDiv = document.getElementById('alert');
+				alertDiv.parentNode.removeChild(alertDiv);
 			}) });
 		}		
 

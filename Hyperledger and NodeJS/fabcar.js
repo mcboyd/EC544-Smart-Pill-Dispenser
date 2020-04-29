@@ -31,19 +31,19 @@ class FabCar extends Contract {
                 restrictions: '1,4',
                 progress: '2,4',
                 progress_history: [ 
-                	{ code: '2', date: '2020-04-01' },
-                	{ code: '2', date: '2020-04-02' }
+                	{ code: 'Nausea', date: '2020-04-01' },
+                	{ code: 'Nausea', date: '2020-04-02' }
                 ],
                 state: 'taking'
             },
             {
                 patient: 'Bellatrix Lestrange',
                 pid: "24",
-                dob: '1998-10-30',
+                dob: '1992-02-23',
                 prescriber: 'user1@org1',
                 prescription_date: '2020-04-01',
-                medication: 'Birth Control',
-                dosage: '300 mg',
+                medication: 'Mircette',
+                dosage: '50 mg',
                 indication: 'Weight',
                 count: "28",
                 quantity: '1 pill',
@@ -67,8 +67,8 @@ class FabCar extends Contract {
                 restrictions: '1',
                 progress: '3',
                 progress_history: [ 
-                	{ code: '3', date: '2020-03-30' },
-                	{ code: '3', date: '2020-04-03' }
+                	{ code: 'Sadness', date: '2020-03-30' },
+                	{ code: 'Sadness', date: '2020-04-03' }
                 ],
                 state: 'taking'
             }
@@ -77,7 +77,7 @@ class FabCar extends Contract {
         for (let i = 0; i < meds.length; i++) {
             meds[i].docType = 'medication';
             // await ctx.stub.putState('CAR' + i, Buffer.from(JSON.stringify(cars[i])));
-            await ctx.stub.putState('M' + i, Buffer.from(JSON.stringify(meds[i])));
+            await ctx.stub.putState('M' + (i+1), Buffer.from(JSON.stringify(meds[i])));
             console.info('Added <--> ', meds[i]);
         }
         console.info('============= END : Initialize Ledger ===========');
@@ -127,7 +127,7 @@ class FabCar extends Contract {
     }
 
     async queryAllCars(ctx) {
-        const startKey = 'M0';
+        const startKey = 'M1';
         const endKey = 'M999';
         const allResults = [];
         for await (const {key, value} of ctx.stub.getStateByRange(startKey, endKey)) {
@@ -146,7 +146,7 @@ class FabCar extends Contract {
     }
 
     async queryAllPatients(ctx) {
-        const startKey = 'M0';
+        const startKey = 'M1';
         const endKey = 'M999';
         //const allResults = [];
         // creating a map object 
@@ -175,7 +175,7 @@ class FabCar extends Contract {
     }
 
     async queryAllPatientMeds(ctx, pid) {
-        const startKey = 'M0';
+        const startKey = 'M1';
         const endKey = 'M999';
         // creating a map object 
         var medMap = new Map(); 
@@ -212,7 +212,7 @@ class FabCar extends Contract {
     }
 
     async queryAllPatientProgress(ctx, pid) {
-        const startKey = 'M0';
+        const startKey = 'M1';
         const endKey = 'M999';
         // creating a map object 
         var progArray = [];
@@ -258,7 +258,7 @@ class FabCar extends Contract {
         console.info('============= END : changeCarOwner ===========');
     }
 
-    async takePrescription(ctx, medNumber, takeTime, timeliness, escalation, progressCode, progressDate) {
+    async takePrescription(ctx, medNumber, takeTime, timeliness, escalation) {
     	console.info('============= START : takePrescription ===========');
 
     	const medAsBytes = await ctx.stub.getState(medNumber); // get the med from chaincode state
@@ -280,19 +280,38 @@ class FabCar extends Contract {
         } else {
         	med.take_history = [{ time: takeTime, timeliness, escalation }];
         }
+
+        await ctx.stub.putState(medNumber, Buffer.from(JSON.stringify(med)));
+        console.info('============= END : takePrescription ===========');
+    }
+
+    async updateProgress(ctx, medNumber, progressCode, progressDate) {
+        console.info('============= START : updateProgress ===========');
+
+        const medAsBytes = await ctx.stub.getState(medNumber); // get the med from chaincode state
+        if (!medAsBytes || medAsBytes.length === 0) {
+            throw new Error(`${medNumber} does not exist`);
+        }
+        const med = JSON.parse(medAsBytes.toString());
+
+        console.info("medication: " + medAsBytes.toString());
+
+        if (med.state == 'prescribed') {
+            med.state = 'taking';
+        } else if (med.state == 'completed') {
+            return "error"
+        }
         
-        if (progressCode) {
-        	if (med.progress_history) {
-        		med.progress_history.push({ code: progressCode, date: progressDate }); 		
-        	} else {
-        		med.progress_history = [{ code: progressCode, date: progressDate }];
-        	}
+        if (med.progress_history) {
+            med.progress_history.push({ code: progressCode, date: progressDate });      
+        } else {
+            med.progress_history = [{ code: progressCode, date: progressDate }];
         }
 
         console.log("medication prog hist: " + med.progress_history);
 
         await ctx.stub.putState(medNumber, Buffer.from(JSON.stringify(med)));
-        console.info('============= END : takePrescription ===========');
+        console.info('============= END : updateProgress ===========');
     }
 
 }
