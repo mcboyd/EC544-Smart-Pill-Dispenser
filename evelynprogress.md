@@ -15,10 +15,10 @@ Weekly Progress:
 
 __Tasks completed__ this week:
 
-[x] Start report template
-[x] Script video demo
-[x] Script Mycroft dialogue
-[x] Check for logistical errors between Lambda and Hyperledger
+- [x] Start report template
+- [x] Script video demo
+- [x] Script Mycroft dialogue
+- [x] Check for logistical errors between Lambda and Hyperledger
 
 ---
 <a name="042020"/>
