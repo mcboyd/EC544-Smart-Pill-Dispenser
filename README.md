@@ -1,4 +1,4 @@
-# EC544-Smart-Pill-Dispenser
+# EC544 Smart Medication Dispenser
 
 Team: Matt Boyd, Evelyn Liu, Yutong Wang  
 
