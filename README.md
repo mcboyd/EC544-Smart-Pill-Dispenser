@@ -10,7 +10,7 @@ Team: Matt Boyd, Evelyn Liu, Yutong Wang
 
 [Project Proposal](EC%20544%20Poject%20Proposal.pdf)
 
-[Project Technical Report](EC544_Technical_Report.pdf)
+[Project Technical Report](TechnicalReport.pdf)
 
 Technical Overview Video  
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=NhOMKpnSwPI
