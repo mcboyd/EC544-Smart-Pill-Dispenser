@@ -13,7 +13,7 @@ Telegram
 - Then, using the progress command, I can check on patient number 23. Here it shows the most recent dates that John has experienced nausea and sadness.
 - I can check on patient 23’s prescriptions. It shows that he’s prescribed tylenol and serotonin, esaclations?, how often they’ve missed their doses, and the indications for the drug.
 - Patient 24 on the other hand is prescribed Mircette for weight problems
-- I can check on the specifics of each medication using their ID. It shows 50 mg per dose, take it 4 times a day, and also escalations and missed doses.
+- I can check on patient 23’s prescriptions. It shows that he’s prescribed tylenol and serotonin, it shows the how frequent their alerts are escalated, and  how often they’ve missed their doses, and the indications for the drug.
 - It also shows you when you enter the commands wrong.
 - We are going to try this on another Telegram user to simulate an unauthorized physician. As you can see, the medication dispenser bot does not leak information.
 
