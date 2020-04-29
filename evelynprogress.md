@@ -11,15 +11,17 @@ Weekly Progress:
 ---
 <a name="042720"/>
 
-### Week ending 4/27/20
+### Week ending 4/27/20-4/29/20
 
 __Tasks completed__ this week:
 
 - [x] Start report template
 - [x] Script video demo
+	- Film & editted the video demo
 - [x] Script Mycroft dialogue
 - [x] Check for logistical errors between Lambda and Hyperledger
 - [x] Recover my "evelynbranch" because everything got deleted....?!?!
+- [x] Contributed to the technical report & did overall edits
 
 ---
 <a name="042020"/>
